@@ -1,0 +1,155 @@
+    .companymain {
+        padding: 20px;
+    }
+    
+    .headingcompany {
+        display: flex;
+    }
+    
+    .arrow {
+        color: aliceblue;
+        padding-right: 10px;
+    }
+    
+    .heading {
+        color: aliceblue;
+        margin-top: -8px;
+        font-size: x-large;
+    }
+    
+    .bodysub {
+        color: white;
+        display: flex;
+    }
+    
+    .bodysub p {
+        text-align: left;
+    }
+    
+    .calendar {
+        margin-left: auto;
+        margin-top: 20px;
+    }
+    
+    .layoutcompany {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .bodycompany {
+        width: 45%;
+        padding: 10px;
+        background-color: #141414;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+    
+    .bodycompany2 {
+        width: 45%;
+        padding: 10px;
+        background-color: #141414;
+        border-radius: 15px;
+    }
+    
+    .bodysubp {
+        color: aqua;
+        font-size: x-large;
+    }
+    
+    .bodysubsecond {
+        display: flex;
+        margin-top: -30px;
+    }
+    
+    .bodysubp2 {
+        color: white;
+        padding-left: 1px;
+        margin-top: 35px;
+        font-size: small;
+    }
+    
+    .noofbills {
+        color: #FF005A;
+        font-size: x-large;
+    }
+    
+    .device {
+        color: #FF005A;
+        font-size: x-large;
+        margin-top: -7px;
+    }
+    
+    .bodysubp3 {
+        color: aqua;
+        font-size: large;
+    }
+    
+    .bodysubp21 {
+        color: white;
+        padding-left: 1px;
+        margin-top: 22px;
+        font-size: small;
+    }
+    
+    .bodysubp21bill {
+        color: white;
+        margin-top: -10px;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    th,
+    td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+    
+    tbody tr:last-child,
+    thead tr,
+    tbody tr:first-child {
+        background-color: white;
+        color: black;
+        /* Set text color to black for these rows */
+    }
+    
+    tbody tr:not(:last-child) {
+        background-color: black;
+        color: white;
+        /* Set text color to white for other rows */
+    }
+    
+    tbody tr:nth-child(even) {
+        background-color: black;
+        /* Set even row background color to a darker shade */
+    }
+    
+    .servicewise {
+        padding: 15px;
+        width: 90%;
+        background-color: #141414;
+        margin-top: 20px;
+        border-radius: 15px;
+    }
+    
+    .servicewise h2 {
+        color: white;
+    }
+    
+    .servicewisesub {
+        display: flex;
+        margin-top: -30px;
+    }
+    
+    .servicewisesub p {
+        color: white;
+    }
