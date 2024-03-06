@@ -22,7 +22,7 @@ const navigate=useNavigate()
   const validateForm = (values) => {
     const errors = {};
     if (!username.trim()) {
-      errors.Username = "Userid is required";
+      errors.Username = "Username is required";
     }
     if (!password.trim()) {
       errors.Password = "Password is required";
