@@ -134,7 +134,7 @@
     }
     
     .servicewise {
-        padding: 15px;
+        padding: 10px;
         width: 90%;
         background-color: #141414;
         margin-top: 20px;
@@ -147,7 +147,8 @@
     
     .servicewisesub {
         display: flex;
-        margin-top: -30px;
+        margin-top: -25px;
+        width: 100%;
     }
     
     .servicewisesub p {
