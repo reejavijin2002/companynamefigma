@@ -192,7 +192,7 @@ const Companyname = () => {
         <div className="servicewisesub">
           <div
             className="chart-container"
-            style={{ height: "300px", overflowY: "auto" ,width:"100%"}}
+            style={{ height: "300px", overflowY: "auto" ,width:"100%",marginTop: "20px"}}
           >
             <div id="chart" ref={chartRef}></div>
           </div>{" "}
