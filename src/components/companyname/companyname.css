@@ -185,6 +185,7 @@
         margin: 0;
         border-radius: 10px;
         z-index: 2;
+        margin-top: 10px;
     }
     
     .suggestions li {
@@ -216,4 +217,14 @@
         background-color: #f2f2f2;
         z-index: 1;
         top: 0;
+    }
+    
+    .close {
+        color: white;
+        height: 25px;
+        width: 25px;
+        margin-left: -40px;
+        padding-top: 20px;
+        margin-top: 10px;
+        margin-bottom: -10px;
     }

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./companyname.css";
 import { FaArrowLeft, FaCalendar } from "react-icons/fa";
 import ApexCharts from "apexcharts";
+import { MdClose } from "react-icons/md";
 
 const Companyname = () => {
   const chartRef = useRef(null);
@@ -180,6 +181,11 @@ const Companyname = () => {
       }
     };
   }, []);
+  const handleClearSearch = () => {
+    setSearchTerm("");
+    setSuggestions([]);
+    setIsDropdownOpen(false);
+  };
 
   return (
     <div className="companymain">
@@ -267,6 +273,7 @@ const Companyname = () => {
         onChange={handleSearch}
         className="filterbox"
       />
+      <MdClose className="close" onClick={handleClearSearch}/>
       {isDropdownOpen && searchTerm && (
         <ul className="suggestions">
           {suggestions.map((item, index) => (
