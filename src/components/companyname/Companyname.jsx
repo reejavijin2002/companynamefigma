@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./companyname.css";
-import { FaArrowLeft, FaCalendar } from "react-icons/fa";
+import { FaArrowLeft, FaCalendar, FaSearch } from "react-icons/fa";
 import ApexCharts from "apexcharts";
 import { MdClose } from "react-icons/md";
 
@@ -312,7 +312,11 @@ const Companyname = () => {
         onChange={handleSearch}
         className="filterbox"
       />
-      <MdClose className="close" onClick={handleClearSearch}/>
+       {searchTerm ? (
+      <MdClose className="close" onClick={handleClearSearch} />
+    ) : (
+      <FaSearch className="search" />
+    )}
       {isDropdownOpen && searchTerm && (
         <ul className="suggestions">
           {suggestions.map((item, index) => (

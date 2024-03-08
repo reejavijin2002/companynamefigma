@@ -228,3 +228,13 @@
         margin-top: 10px;
         margin-bottom: -10px;
     }
+    
+    .search {
+        color: white;
+        height: 22px;
+        width: 22px;
+        margin-left: -40px;
+        padding-top: 20px;
+        margin-top: 10px;
+        margin-bottom: -8px;
+    }
