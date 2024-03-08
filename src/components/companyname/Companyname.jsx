@@ -23,6 +23,32 @@ const Companyname = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Backspace" && searchTerm === "") {
+        setTableData([
+          { serviceName: "sachin", qty: 300, amount: 2.0 },
+          { serviceName: "messi", qty: 300, amount: 2.0 },
+          { serviceName: "neymar", qty: 300, amount: 2.0 },
+          { serviceName: "santhosh", qty: 300, amount: 2.0 },
+          { serviceName: "ashfskaha", qty: 300, amount: 2.0 },
+          { serviceName: "sured", qty: 300, amount: 2.0 },
+          { serviceName: "service", qty: 300, amount: 2.0 },
+          { serviceName: "bus", qty: 300, amount: 2.0 },
+          { serviceName: "tembp", qty: 300, amount: 2.0 },
+          { serviceName: "som", qty: 300, amount: 2.0 },
+        ]);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [searchTerm]);
+  
+
   const handleSearch = (event) => {
     const { value } = event.target;
     setSearchTerm(value);
@@ -38,7 +64,7 @@ const Companyname = () => {
     const selectedRow = tableData.find(
       (item) => item.serviceName === serviceName
     );
-    setSearchTerm(serviceName); // Update the input field with the selected service name
+    setSearchTerm(serviceName); 
     setTableData([selectedRow]);
     setIsDropdownOpen(false);
   };
