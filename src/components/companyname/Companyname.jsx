@@ -38,6 +38,7 @@ const Companyname = () => {
     const selectedRow = tableData.find(
       (item) => item.serviceName === serviceName
     );
+    setSearchTerm(serviceName); // Update the input field with the selected service name
     setTableData([selectedRow]);
     setIsDropdownOpen(false);
   };
@@ -185,6 +186,18 @@ const Companyname = () => {
     setSearchTerm("");
     setSuggestions([]);
     setIsDropdownOpen(false);
+    setTableData([
+      { serviceName: "sachin", qty: 300, amount: 2.0 },
+      { serviceName: "messi", qty: 300, amount: 2.0 },
+      { serviceName: "neymar", qty: 300, amount: 2.0 },
+      { serviceName: "santhosh", qty: 300, amount: 2.0 },
+      { serviceName: "ashfskaha", qty: 300, amount: 2.0 },
+      { serviceName: "sured", qty: 300, amount: 2.0 },
+      { serviceName: "service", qty: 300, amount: 2.0 },
+      { serviceName: "bus", qty: 300, amount: 2.0 },
+      { serviceName: "tembp", qty: 300, amount: 2.0 },
+      { serviceName: "som", qty: 300, amount: 2.0 },
+    ]);
   };
 
   return (
