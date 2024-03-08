@@ -13,7 +13,6 @@ const Companyname = () => {
     { serviceName: "santhosh", qty: 300, amount: 2.0 },
     { serviceName: "ashfskaha", qty: 300, amount: 2.0 },
     { serviceName: "babu", qty: 300, amount: 2.0 },
-    { serviceName: "Total bills: 1000", qty: 1000, amount: 200 },
   ]);
 
   const [suggestions, setSuggestions] = useState([]);
@@ -23,16 +22,18 @@ const Companyname = () => {
     const { value } = event.target;
     setSearchTerm(value);
 
-    const uniqueSuggestions = Array.from(new Set(tableData.map(item => item.serviceName.toLowerCase())))
-      .filter(serviceName => serviceName.toLowerCase().includes(value.toLowerCase()))
-      .map(serviceName => tableData.find(item => item.serviceName.toLowerCase() === serviceName));
-
-    setSuggestions(uniqueSuggestions);
+    const filteredSuggestions = tableData.filter((item) =>
+      item.serviceName.toLowerCase().includes(value.toLowerCase())
+    );
+    setSuggestions(filteredSuggestions);
     setIsDropdownOpen(true);
   };
 
   const handleSuggestionClick = (serviceName) => {
-    setSearchTerm(serviceName);
+    const selectedRow = tableData.find(
+      (item) => item.serviceName === serviceName
+    );
+    setTableData([selectedRow]);
     setIsDropdownOpen(false);
   };
 
@@ -100,7 +101,7 @@ const Companyname = () => {
             hideOverflowingLabels: true,
             position: "end",
           },
-          barHeight: "40%",
+          barHeight: "35%",
           barWidth: "50%",
         },
       },
@@ -244,10 +245,10 @@ const Companyname = () => {
           <div
             className="chart-container"
             style={{
-              height: "300px",
+              height: "230px",
               overflowY: "auto",
               width: "100%",
-              marginTop: "20px",
+              marginTop: "0px",
             }}
           >
             <div id="chart" ref={chartRef}></div>
@@ -274,7 +275,7 @@ const Companyname = () => {
             ))}
           </ul>
         )}
-        <table>
+        <table  >
           <thead>
             <tr>
               <th>Service Name</th>
@@ -282,16 +283,19 @@ const Companyname = () => {
               <th>Amount</th>
             </tr>
           </thead>
-          <tbody>
-            {tableData
-              .filter((row) => row.serviceName.toLowerCase().includes(searchTerm.toLowerCase()))
-              .map((row, index) => (
-                <tr key={index}>
-                  <td>{row.serviceName}</td>
-                  <td>{row.qty}</td>
-                  <td>{row.amount}</td>
-                </tr>
-              ))}
+          <tbody   >
+            {tableData.map((row, index) => (
+              <tr key={index}>
+                <td>{row.serviceName}</td>
+                <td>{row.qty}</td>
+                <td>{row.amount}</td>
+              </tr>
+            ))}
+            <tr style={{ backgroundColor: "white", color: "black" }}>
+              <td>Total bills: 1000</td>
+              <td>1000</td>
+              <td>200</td>
+            </tr>
           </tbody>
         </table>
       </div>
