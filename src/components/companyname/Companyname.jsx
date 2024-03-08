@@ -12,7 +12,11 @@ const Companyname = () => {
     { serviceName: "neymar", qty: 300, amount: 2.0 },
     { serviceName: "santhosh", qty: 300, amount: 2.0 },
     { serviceName: "ashfskaha", qty: 300, amount: 2.0 },
-    { serviceName: "babu", qty: 300, amount: 2.0 },
+    { serviceName: "sured", qty: 300, amount: 2.0 },
+    { serviceName: "service", qty: 300, amount: 2.0 },
+    { serviceName: "bus", qty: 300, amount: 2.0 },
+    { serviceName: "tembp", qty: 300, amount: 2.0 },
+    { serviceName: "som", qty: 300, amount: 2.0 },
   ]);
 
   const [suggestions, setSuggestions] = useState([]);
@@ -179,127 +183,130 @@ const Companyname = () => {
 
   return (
     <div className="companymain">
-      <div className="headingcompany">
-        <FaArrowLeft className="arrow" height="50px" />
-        <p className="heading">Company Name</p>
-      </div>
-      <div className="layoutcompany">
-        <div className="bodycompany">
-          <div className="bodysub">
-            <p>Today sales</p>
-            <FaCalendar className="calendar" />
-          </div>
-          <div className="bodysubsecond">
-            <p className="bodysubp">1322.610</p>
-            <p className="bodysubp2">INR</p>
-          </div>
+    <div className="headingcompany">
+      <FaArrowLeft className="arrow" height="50px" />
+      <p className="heading">Company Name</p>
+    </div>
+    <div className="layoutcompany">
+      <div className="bodycompany">
+        <div className="bodysub">
+          <p>Today sales</p>
+          <FaCalendar className="calendar" />
         </div>
-        <div className="bodycompany2">
-          <div className="bodysub">
-            <p>Today No of Bills </p>
-          </div>
-          <div className="bodysubsecond">
-            <p className="noofbills">115</p>
-          </div>
+        <div className="bodysubsecond">
+          <p className="bodysubp">1322.610</p>
+          <p className="bodysubp2">INR</p>
         </div>
       </div>
-      <div className="layoutcompany">
-        <div className="bodycompany">
-          <p className="device">Device 1</p>
-          <div className="bodysubsecond">
-            <p className="bodysubp3">1322.610</p>
-            <p className="bodysubp21">INR</p>
-          </div>
-          <p className="bodysubp21bill">21 Bill</p>
+      <div className="bodycompany2">
+        <div className="bodysub">
+          <p>Today No of Bills </p>
         </div>
-        <div className="bodycompany2">
-          <p className="device">Device 2</p>
-          <div className="bodysubsecond">
-            <p className="bodysubp3">1322.610</p>
-            <p className="bodysubp21">INR</p>
-          </div>
-          <p className="bodysubp21bill">21 Bill</p>
+        <div className="bodysubsecond">
+          <p className="noofbills">115</p>
         </div>
-      </div>
-      <div className="layoutcompany">
-        <div className="bodycompany">
-          <p className="device">Device 3</p>
-          <div className="bodysubsecond">
-            <p className="bodysubp3">1322.610</p>
-            <p className="bodysubp21">INR</p>
-          </div>
-          <p className="bodysubp21bill">21 Bill</p>
-        </div>
-        <div className="bodycompany2">
-          <p className="device">Device 4</p>
-          <div className="bodysubsecond">
-            <p className="bodysubp3">1322.610</p>
-            <p className="bodysubp21">INR</p>
-          </div>
-          <p className="bodysubp21bill">21 Bill</p>
-        </div>
-      </div>
-      <div className="servicewise">
-        <h2>Service Wise</h2>
-        <div className="servicewisesub">
-          <div
-            className="chart-container"
-            style={{
-              height: "230px",
-              overflowY: "auto",
-              width: "100%",
-              marginTop: "0px",
-            }}
-          >
-            <div id="chart" ref={chartRef}></div>
-          </div>{" "}
-        </div>
-      </div>
-      <div className="table-container">
-        <input
-          type="text"
-          placeholder="Search Service Name"
-          value={searchTerm}
-          onChange={handleSearch}
-          className="filterbox"
-        />
-        {isDropdownOpen && searchTerm && (
-          <ul className="suggestions">
-            {suggestions.map((item, index) => (
-              <li
-                key={index}
-                onClick={() => handleSuggestionClick(item.serviceName)}
-              >
-                {item.serviceName}
-              </li>
-            ))}
-          </ul>
-        )}
-        <table  >
-          <thead>
-            <tr>
-              <th>Service Name</th>
-              <th>QTY</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody   >
-            {tableData.map((row, index) => (
-              <tr key={index}>
-                <td>{row.serviceName}</td>
-                <td>{row.qty}</td>
-                <td>{row.amount}</td>
-              </tr>
-            ))}
-            <tr style={{ backgroundColor: "white", color: "black" }}>
-              <td>Total bills: 1000</td>
-              <td>1000</td>
-              <td>200</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
+    <div className="layoutcompany">
+      <div className="bodycompany">
+        <p className="device">Device 1</p>
+        <div className="bodysubsecond">
+          <p className="bodysubp3">1322.610</p>
+          <p className="bodysubp21">INR</p>
+        </div>
+        <p className="bodysubp21bill">21 Bill</p>
+      </div>
+      <div className="bodycompany2">
+        <p className="device">Device 2</p>
+        <div className="bodysubsecond">
+          <p className="bodysubp3">1322.610</p>
+          <p className="bodysubp21">INR</p>
+        </div>
+        <p className="bodysubp21bill">21 Bill</p>
+      </div>
+    </div>
+    <div className="layoutcompany">
+      <div className="bodycompany">
+        <p className="device">Device 3</p>
+        <div className="bodysubsecond">
+          <p className="bodysubp3">1322.610</p>
+          <p className="bodysubp21">INR</p>
+        </div>
+        <p className="bodysubp21bill">21 Bill</p>
+      </div>
+      <div className="bodycompany2">
+        <p className="device">Device 4</p>
+        <div className="bodysubsecond">
+          <p className="bodysubp3">1322.610</p>
+          <p className="bodysubp21">INR</p>
+        </div>
+        <p className="bodysubp21bill">21 Bill</p>
+      </div>
+    </div>
+    <div className="servicewise">
+      <h2>Service Wise</h2>
+      <div className="servicewisesub">
+        <div
+          className="chart-container"
+          style={{
+            height: "230px",
+            overflowY: "auto",
+            width: "100%",
+            marginTop: "0px",
+          }}
+        >
+          <div id="chart" ref={chartRef}></div>
+        </div>{" "}
+      </div>
+    </div>
+    <div className="table-container">
+      <input
+        type="text"
+        placeholder="Search Service Name"
+        value={searchTerm}
+        onChange={handleSearch}
+        className="filterbox"
+      />
+      {isDropdownOpen && searchTerm && (
+        <ul className="suggestions">
+          {suggestions.map((item, index) => (
+            <li
+              key={index}
+              onClick={() => handleSuggestionClick(item.serviceName)}
+            >
+              {item.serviceName}
+            </li>
+          ))}
+        </ul>
+      )}
+    <div className="table-scroll">
+  <table>
+    <thead style={{position:""}}>
+      <tr >
+        <th>Service Name</th>
+        <th>QTY</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody className="table-body">
+      {tableData.map((row, index) => (
+        <tr key={index}>
+          <td>{row.serviceName}</td>
+          <td>{row.qty}</td>
+          <td>{row.amount}</td>
+        </tr>
+      ))}
+      <tr style={{ backgroundColor: "white", color: "black" }}>
+        <td>Total bills: 1000</td>
+        <td>1000</td>
+        <td>200</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    </div>
+  </div>
   );
 };
 

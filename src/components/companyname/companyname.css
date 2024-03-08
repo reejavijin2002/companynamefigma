@@ -119,18 +119,21 @@
     tbody tr:first-child {
         background-color: white;
         color: black;
-        /* Set text color to black for these rows */
     }
     
     tbody tr:not(:last-child) {
         background-color: black;
         color: white;
-        /* Set text color to white for other rows */
     }
     
     tbody tr:nth-child(even) {
         background-color: black;
-        /* Set even row background color to a darker shade */
+    }
+    
+    .table1 {
+        position: relative;
+        max-height: 200px;
+        overflow-y: auto;
     }
     
     .servicewise {
@@ -172,32 +175,45 @@
     .suggestions {
         position: absolute;
         background-color: white;
-        /* Set the background color to white */
         border: 1px solid #ccc;
-        /* Add a border for better visibility */
         border-top: none;
-        /* Hide the top border to match the input field */
-        width: calc(96% - 10px);
-        /* Adjust the width to match the input field */
+        width: calc(95% - 10px);
         max-height: 200px;
-        /* Set a maximum height for the dropdown */
         overflow-y: auto;
-        /* Enable vertical scrolling if the content overflows */
         list-style: none;
-        /* Remove default list styles */
         padding: 0;
-        /* Remove default padding */
         margin: 0;
         border-radius: 10px;
+        z-index: 2;
     }
     
     .suggestions li {
         padding: 8px 10px;
-        /* Add padding to the list items for spacing */
         cursor: pointer;
-        /* Change cursor to pointer to indicate clickable items */
     }
     
-    .suggestions li:hover {
-        /* Change background color on hover */
+    .table-scroll {
+        max-height: 300px;
+        overflow-y: auto;
+        margin-top: 20px;
+    }
+    
+    .table-scroll table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .table-scroll th,
+    .table-scroll td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black;
+    }
+    
+    .table-scroll th {
+        position: sticky;
+        left: 0;
+        background-color: #f2f2f2;
+        z-index: 1;
+        top: 0;
     }
