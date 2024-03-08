@@ -154,3 +154,50 @@
     .servicewisesub p {
         color: white;
     }
+    
+    .filterbox {
+        width: 46%;
+        height: 30px;
+        padding: 5px;
+        margin-top: 20px;
+        margin-bottom: -20px;
+        align-items: end;
+        justify-content: end;
+        border-radius: 10px;
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+    }
+    
+    .suggestions {
+        position: absolute;
+        background-color: white;
+        /* Set the background color to white */
+        border: 1px solid #ccc;
+        /* Add a border for better visibility */
+        border-top: none;
+        /* Hide the top border to match the input field */
+        width: calc(46% - 10px);
+        /* Adjust the width to match the input field */
+        max-height: 200px;
+        /* Set a maximum height for the dropdown */
+        overflow-y: auto;
+        /* Enable vertical scrolling if the content overflows */
+        list-style: none;
+        /* Remove default list styles */
+        padding: 0;
+        /* Remove default padding */
+        margin: 0;
+        border-radius: 10px;
+    }
+    
+    .suggestions li {
+        padding: 8px 10px;
+        /* Add padding to the list items for spacing */
+        cursor: pointer;
+        /* Change cursor to pointer to indicate clickable items */
+    }
+    
+    .suggestions li:hover {
+        /* Change background color on hover */
+    }
