@@ -232,7 +232,7 @@ const Companyname = () => {
       <FaArrowLeft className="arrow" height="50px" />
       <p className="heading">Company Name</p>
     </div>
-    <div className="layoutcompany">
+    <div className="layoutcompany" style={{marginTop:"50px"}}>
       <div className="bodycompany">
         <div className="bodysub">
           <p>Today sales</p>

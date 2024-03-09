@@ -4,6 +4,12 @@
     
     .headingcompany {
         display: flex;
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        height: 40px;
+        margin-top: -20px;
+        padding-top: 20px;
     }
     
     .arrow {
