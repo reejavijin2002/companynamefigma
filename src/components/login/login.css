@@ -4,7 +4,7 @@
         caret-color: transparent;
         outline: none;
         background-color: black;
-        height: 100vh;
+        height: 90vh;
     }
     .seconddiv {
         background-color: rgb(47, 47, 47);
@@ -12,7 +12,7 @@
         padding-top: 50px;
         padding-bottom: 50px;
         border-radius: 10px;
-        margin-top: 150px;
+        margin-top: 46%;
     }
     img {
         margin-top: 40px;
@@ -149,8 +149,9 @@
 
 .maindiv {
     padding: 20px 20px;
-    height: 95vh;
+    height: auto;
     background-color: black;
+    overflow-x: hidden;
 }
 
 img {

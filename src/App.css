@@ -1,5 +1,10 @@
 .App {
     background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    /* Prevent scrolling */
 }
 
 .App-logo {
